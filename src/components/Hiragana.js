@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { hiraganaData, hiraganaRows } from '../materials/hiragana';
-import { useAudio } from '../hooks/useAudio';
-
+import { useAudio } from '../hooks/useAudio'; 
 const Hiragana = () => {
   const [selectedChar, setSelectedChar] = useState(null);
   const [mode, setMode] = useState('learn');
   const [showRomaji, setShowRomaji] = useState(true);
-  const { speak, playing } = useAudio();
+const { speak } = useAudio();
 
   const handleCharClick = (char) => {
     const found = hiraganaData.find((h) => h.kana === char);

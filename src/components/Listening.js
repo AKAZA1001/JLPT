@@ -97,7 +97,7 @@ const Listening = () => {
   const [selectedLevel, setSelectedLevel] = useState('All');
   const [playingId, setPlayingId] = useState(null);
   const [showTranslation, setShowTranslation] = useState({});
-  const { speak, playing } = useAudio();
+const { speak } = useAudio();
 
   const filtered = listeningExercises.filter((ex) =>
     selectedLevel === 'All' || ex.level === selectedLevel
